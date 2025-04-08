@@ -1,0 +1,47 @@
+{
+  "include": ["src"],
+  "compilerOptions": {
+    "outDir": "dist",
+    "target": "ES2020",
+    "declaration": true,
+    "allowJs": true,
+    "emitDeclarationOnly": false,
+    "declarationMap": false,
+
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": false,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": false,
+    "jsx": "react-jsx",
+
+    "strict": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": false,
+
+    "baseUrl": "./",
+    "paths": {
+      "components/*": ["./src/components/*"],
+      "hooks/*": ["./src/hooks/*"],
+      "interfaces/*": ["./src/interfaces/*"],
+      "types/*": ["./src/types/*"],
+      "stores/*": ["./src/stores/*"],
+      "utils/*": ["./src/utils/*"],
+      "enums/*": ["./src/enums/*"]
+    },
+    "plugins": [
+      { "transform": "typescript-transform-paths" },
+      { "transform": "typescript-transform-paths", "afterDeclarations": true }
+    ]
+  },
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
+  }
+}
